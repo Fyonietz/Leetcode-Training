@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int* twoSum(int* nums,int nums_size,int target,int* returnSize){
-  int* result = malloc(2 * sizeof(int));
+  int* result = (int*)malloc(2 * sizeof(int));
 
   if(result == NULL){
     return NULL;
@@ -35,5 +35,6 @@ int main(void){
   int resultSize = 2;
   int* two= twoSum(nums,nums_size,target,&resultSize);
   printf("Output : [%d,%d]\n",two[0],two[1]);
+  free(two);
   return 0;
 }
