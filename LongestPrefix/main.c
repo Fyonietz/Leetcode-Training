@@ -3,15 +3,18 @@
 
 char* longestCommonPrefix(char** strs, int strsSize) {
     int size_of_element[strsSize];
+    char* result;
     for(int i = 0;i < strsSize;i++){
       size_of_element[i] = strlen(strs[i]);
       printf("Size Of Each Element(%d) : %d\n",i,size_of_element[i]);
       for(int j = 0; j < i; j++){
         if(strs[i][j] == strs[i+1][j]){
-          i+=1;
-          return "true";
+          printf("Result : %c\n",strs[i][j]);
+          result += strs[i][j];
+          break;
         }
       }
+      return result;
     }
     return "false";
 }
