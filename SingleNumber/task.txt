@@ -1,0 +1,6 @@
+1.Create An Array {2,2,1};
+2.Make 2 pointer left and right;
+3.at start it point like this
+{2,2,1}
+ ^   ^
+4.
