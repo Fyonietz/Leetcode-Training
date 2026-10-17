@@ -2,21 +2,19 @@
 #include <string.h>
 
 char* longestCommonPrefix(char** strs, int strsSize) {
-    int size_of_element[strsSize];
-    char* result;
-    for(int i = 0;i < strsSize;i++){
-      size_of_element[i] = strlen(strs[i]);
-      printf("Size Of Each Element(%d) : %d\n",i,size_of_element[i]);
-      for(int j = 0; j < i; j++){
-        if(strs[i][j] == strs[i+1][j]){
-          printf("Result : %c\n",strs[i][j]);
-          result += strs[i][j];
-          break;
-        }
-      }
-      return result;
+  
+  for(int i = 0; ;++i){
+    if(strs[0][i] == '\0'){
+      return strs[0];
     }
-    return "false";
+    for(int j = 1; j < strsSize;++j){
+      if(strs[j][i] != strs[0][i]){
+        strs[0][i] = '\0';
+        return strs[0];
+      }
+    }
+  }
+
 }
 
 int main(void){
