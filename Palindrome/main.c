@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 //TODO convert to string
+
 void to_string(int input){
   for(int i = 0; input > 0; i++){
     if(input % 2){
@@ -11,7 +12,7 @@ void to_string(int input){
     }
   }
 }
-
+//ATP Just Commit Anything
 bool isPalindrome(int x) {
 
 }
