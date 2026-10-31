@@ -12,7 +12,7 @@ void to_string(int input){
     }
   }
 }
-//ATP Just Commit Anything
+//ATP Just Commit Anythings
 bool isPalindrome(int x) {
 
 }
